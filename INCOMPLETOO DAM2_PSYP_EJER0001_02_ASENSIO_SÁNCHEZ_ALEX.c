@@ -23,7 +23,7 @@ int main()
     
     printf("La dirección de memoria del segundo numero es: %p\n", &numero2);
     
-    printf("La variable 1 ocupa %d bytes de tamaño en memoria\n", sizeof(numero1));
+    printf("La variable 1 ocupa %ld bytes de tamaño en memoria\n", sizeof(numero1));
 
     return 0;
 }
