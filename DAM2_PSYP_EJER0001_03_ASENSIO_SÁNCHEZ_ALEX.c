@@ -7,11 +7,15 @@ Welcome to GDB Online.
 
 *******************************************************************************/
 #include <stdio.h>
-
+#include <stdbool.h> 
+ 
 int main()
 {
     int numero1;
     int numero2;
+    int numero3;
+    int variableVacia;
+    bool ordenados=false;
     
     printf("Introduce un numero:\n");
     scanf("%d", &numero1);
@@ -19,11 +23,25 @@ int main()
     printf("Introduce otro numero:\n");
     scanf("%d", &numero2);
     
-    printf("La dirección de memoria del primer numero es: %p\n", &numero1);
+    printf("Introduce otro numero:\n");
+    scanf("%d", &numero3);
     
-    printf("La dirección de memoria del segundo numero es: %p\n", &numero2);
+    while(!ordenados){
+        if(numero1>numero2){
+            variableVacia=numero1;
+            numero1=numero2;
+            numero2=variableVacia;
+        }else if(numero2>numero3){
+            variableVacia=numero2;
+            numero2=numero3;
+            numero3=variableVacia;
+        }
+        else{
+            ordenados=true;
+        }
+    };
     
-    printf("La variable 1 ocupa %d bytes de tamaño en memoria\n", sizeof(numero1));
+    printf("Numeros ordenados: %d %d %d", numero1, numero2, numero3);
 
     return 0;
 }
