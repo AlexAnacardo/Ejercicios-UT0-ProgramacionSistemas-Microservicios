@@ -12,7 +12,7 @@ int main()
 {
     int numero1;
     int numero2;
-    int operacion;
+    char operacion;
     
     printf("Introduce un numero:\n");
     scanf("%d", &numero1);
@@ -20,27 +20,29 @@ int main()
     printf("Introduce otro numero:\n");
     scanf("%d", &numero2);
     
-    printf("¿Que quieres hacer?:\n 1.Sumar \n 2.Restar \n 3.Multiplicar \n 4.Dividir \n 5.Salir \n");
-    scanf("%d", &operacion);
+    getchar(); 
+    
+    printf("¿Que quieres hacer?:\n a.Sumar \n b.Restar \n c.Multiplicar \n d.Dividir \n e.Salir \n");
+    scanf("%c", &operacion);
     
     switch(operacion){
-        case 1: 
+        case 'a': 
             printf("La suma de los dos numeros es: %d\n", numero1+numero2);
         break;
         
-        case 2: 
+        case 'b': 
             printf("La resta de los dos numeros es: %d\n", numero1-numero2);
         break;
         
-        case 3: 
+        case 'c': 
             printf("La multiplicación de los dos numeros es: %d\n", numero1*numero2);
         break;
         
-        case 4: 
+        case 'd': 
             printf("La division de los dos numeros es: %f\n", (float)numero1/numero2);
         break;
         
-        case 5: 
+        case 'e': 
             
         break;
         
