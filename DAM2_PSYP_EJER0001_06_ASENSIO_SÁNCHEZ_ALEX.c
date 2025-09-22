@@ -9,6 +9,27 @@ Welcome to GDB Online.
 #include <stdio.h>
 #include <stdbool.h> 
 
+int sumar(int num1, int num2){
+    return num1+num2;
+}
+
+int restar(int num1, int num2){
+    return num1-num2;
+}
+
+int multiplicar(int num1, int num2){
+    return num1*num2;
+}
+
+float dividir(int num1, int num2){
+    return (float)num1/num2;
+}
+
+bool salirPrograma(){
+    printf("Saliendo del programa...");
+    return true;
+}
+
 int main()
 {
     int numero1;
@@ -30,24 +51,23 @@ int main()
         
         switch(operacion){
             case 'a': 
-                printf("La suma de los dos numeros es: %d\n", numero1+numero2);
+                printf("La suma de los dos numeros es: %d\n", sumar(numero1, numero2));
             break;
             
             case 'b': 
-                printf("La resta de los dos numeros es: %d\n", numero1-numero2);
+                printf("La resta de los dos numeros es: %d\n", restar(numero1, numero2));
             break;
             
             case 'c': 
-                printf("La multiplicación de los dos numeros es: %d\n", numero1*numero2);
+                printf("La multiplicación de los dos numeros es: %d\n", multiplicar(numero1, numero2));
             break;
             
             case 'd': 
-                printf("La division de los dos numeros es: %f\n", (float)numero1/numero2);
+                printf("La division de los dos numeros es: %f\n", dividir(numero1, numero2));
             break;
             
             case 'e': 
-                salir=true;
-                printf("Saliendo del programa...");
+                salir=salirPrograma();
             break;
             
             default:
@@ -58,3 +78,4 @@ int main()
 
     return 0;
 }
+
