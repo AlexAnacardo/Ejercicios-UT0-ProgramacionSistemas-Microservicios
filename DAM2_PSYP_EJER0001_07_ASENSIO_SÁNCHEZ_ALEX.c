@@ -19,7 +19,11 @@ int main()
         int comprobadorEntero=scanf("%d", &numero);
         
         if(comprobadorEntero==1 && numero>0 && numero<21){
-            printf("El numero introducido esta entre 1 y 20 (%d)", numero);
+            printf("El numero introducido esta entre 1 y 20 (%d)\n", numero);
+            
+            for(int i=0; i<=10; i++){
+                printf("%d x %d = %d\n", numero, i, numero*i);
+            }
             entradaCorrecta=true;
         }
         else{
